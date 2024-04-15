@@ -1,4 +1,4 @@
-package main
+package wterminal
 
 type Event struct {
 	EventCode int    `json:"eventCode" form:"eventCode"`
