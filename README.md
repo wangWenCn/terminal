@@ -1,0 +1,2 @@
+# terminal
+device terminal
