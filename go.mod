@@ -1,3 +1,3 @@
-module github.com/wangWenCn/terminal
+module terminal
 
 go 1.20
