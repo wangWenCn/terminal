@@ -1,4 +1,4 @@
-package terminal
+package main
 
 type Event struct {
 	EventCode int    `json:"eventCode" form:"eventCode"`
