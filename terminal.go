@@ -1,5 +1,7 @@
 package wterminal
 
+import "github.com/eclipse/paho.golang/paho"
+
 type Event struct {
 	EventCode int    `json:"eventCode" form:"eventCode"`
 	Number    string `json:"number" form:"number"`
@@ -15,5 +17,8 @@ type MqttTerminal interface {
 	GenerateOnlineMessage(clientID string) string
 	GenerateLastWillMessage(clientID string) string
 	GenerateLastWillTopic(clientID string) string
+	GetReceivedChan() chan *paho.Publish
+	GenerateOnClientError(err error)
+	GenerateSubscribeOptions() []paho.SubscribeOptions
 	Separated() bool
 }
